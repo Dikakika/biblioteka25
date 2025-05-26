@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Библиотека-филиал № 25 — Центр информационной поддержки образования</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+ header{
+            background: linear-gradient(90deg, #0052cc, #0099ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 10px;
+            opacity: 0.85;
+        }
+        main.container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 1.8rem;
+            color: #004b99;
+            border-bottom: 3px solid #0099ff;
+            padding-bottom: 6px;
+                }
+        p {
+            margin: 1em 0;
+            font-size: 1.05rem;
+        }
+        .highlight {
+            color: #007bff;
+            font-weight: 600;
+        }
+        .contact-info p, .working-hours p {
+            margin: 0.5em 0;
+        }
+        .contact-info strong {
+            color: #0056b3;
+        }
+.working-hours {
+            background: #e7f0ff;
+            border-left: 5px solid #0099ff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .working-hours h3 {
+            margin-top: 0;
+            color: #004080;
+        }
+        footer {
+            background: #0052cc;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+            box-shadow: inset 0 1px 8px rgba(255,255,255,0.1);
+        }
+/* карта */
+        .map-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        #map {
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,153,255,0.3);
+            margin: 0 auto;
+        }
+        @media (max-width: 600px) {
+            main.container {
+                padding: 20px;
+                margin: 20px 10px;
+            }
+ header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+       integrity="sha256-sA+e2lq0Y324ybLnG+PLkNs0P2kNdJ6tD3hXh7sxPSs="
+       crossorigin=""/>
+</head>
+<body>
+<img class="top-image" src="https://sun9-78.userapi.com/impg/bwinBNvGeHuoDDgK3lyHpp3Ag5DOalFNbAC4mg/ideqiHR6NoU.jpg?size=1280x853&amp;quality=95&amp;sign=1e670ab4f0ba62be5c08cae8f9b36ea8&amp;type=album" alt="Фасад библиотеки №25" />
+<header>
+    <h1>Библиотека-филиал № 25</h1>
+    <p>Центр информационной поддержки образования с 1973 года</p>
+</header>
+<main class="container">
+    <section>
+        <h2>О библиотеке</h2>
+<img class="about-image" src="https://sun9-70.userapi.com/impg/punXDynqblLKXobmUwym4wPuC9lJxkH0SM2Rog/0VKJ8-u5QBk.jpg?size=810x1080&amp;quality=95&amp;sign=6a35067c4f0f9fced19c5f8e52019da4&amp;type=album" alt="Интерьер библиотеки-филиала № 25" />
+        <p><span class="highlight">Библиотека-филиал № 25</span> — это надежный и современный центр информационной поддержки образования, который динамично развивается с момента своего основания в 1973 году. Расположенная в непосредственной близости от главного учебного заведения Волгограда — Волгоградского государственного университета — библиотека стала важным культурным и образовательным ресурсом для города.</p>
+        <p>Наша миссия — обеспечить широкий доступ к знаниям и информации для всех категорий читателей: педагогов, студентов, школьников и всех, кто стремится к профессиональному или самообразованию. Мы используем широкий спектр библиотечно-информационных и сервисных услуг, чтобы оперативно и качественно удовлетворить разнообразные учебные и информационные запросы наших посетителей.</p>
+        <p>Активно развивая сотрудничество с учебными заведениями, библиотека-филиал № 25 тесно взаимодействует с муниципальной властью, участвуя в социальных и культурных программах района, чтобы создавать максимально комфортные условия для образования и научных исследований.</p>
+    </section>
+<section>
+        <h2>Наш фонд</h2>
+<img class="fund-image" src="http://volglib.ru/wp-content/uploads/2015/10/NDL_mini-300x106.jpg" alt="Логотип универсального фонда NDL_mini" />
+        <p>Благодаря постоянному обновлению и расширению фонда, у нас накоплено более <span class="highlight">35,500</span> печатных изданий самого разного направления. Это универсальный фонд, охватывающий учебную, научную и художественную литературу, специализированные справочники и электронные ресурсы.</p>
+        <p>Мы стремимся соответствовать требованиям современного образования и профессионального развития, регулярно пополняя коллекции новыми изданиями и современными источниками информации.</p>
+    </section>
+<section>
+        <h2>Руководство библиотекой</h2>
+        <p><strong>Заведующая библиотекой-филиалом № 25:</strong> <em>Дубовицкая Валентина Петровна</em> — профессионал с многолетним опытом в библиотечном деле, который вдохновляет коллектив на развитие и внедрение инновационных подходов к работе с читателями.</p>
+    </section>
+<section>
+        <h2>Контактная информация и адрес</h2>
+        <div class="contact-info">
+            <p><strong>Адрес:</strong> 400062, г. Волгоград, проспект Университетский, дом 82 (Советский район)</p>
+            <p><strong>Проезд:</strong> автобусами № 2, 25, 77, 85 — остановка «Зеленое кольцо»</p>
+            <p><strong>Телефон:</strong> (8442) 46-16-37</p>
+        </div>
+    </section>
+ <section>
+        <h2>Режим работы</h2>
+        <div class="working-hours">
+            <h3>Зимний период (май — сентябрь)</h3>
+            <p><strong>Часы работы:</strong> с 11:00 до 19:00</p>
+            <p><strong>Выходной день:</strong> понедельник</p>
+            <p><strong>Санитарный день:</strong> последний четверг каждого месяца</p>
+        </div>
+        <div class="working-hours">
+<h3>Летний период (июнь — август)</h3>
+            <p><strong>Часы работы:</strong> с 11:00 до 19:00</p>
+            <p><strong>Выходные дни:</strong> воскресенье, понедельник</p>
+        </div>
+    </section>
+<section>
+        
+        </div>
+    </section>
+</main>
+<footer>
+    &copy; 2023 Библиотека-филиал № 25 — Все права защищены
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-o9N1j7Q3852cL7F6TJ6tgflOCetX2rolled4I3WY2t8="
+   crossorigin=""></script>
+<script>
+ // Координаты для адреса Волгоград, проспект Университетский, дом 82
+    const coordinates = [48.7369, 44.5408]; // примерные координаты, уточните при необходимости
+    const map = L.map('map').setView(coordinates, 16);
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19,
+    }).addTo(map);
+    const marker = L.marker(coordinates).addTo(map);
+    marker.bindPopup("<b>Библиотека-филиал № 25</b><br> проспект Университетский, дом 82").openPopup();
+</script>
+</body>
+</html>
